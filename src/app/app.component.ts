@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { data } from './data/sample_data';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-assesment';
+  title = 'angular-assesment';  
+
+  constructor(private router: Router) {
+  }
+
+  ngOnInit() {
+    this.router.navigateByUrl('/table');
+  }
 }
